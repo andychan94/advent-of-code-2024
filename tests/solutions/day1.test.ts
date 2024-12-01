@@ -1,19 +1,20 @@
-import { solve } from "../../src/solutions/day1";
+import { solvePart1, solvePart2 } from "../../src/solutions/day1";
 
 describe('Day 1 solution', () => {
-    it('can solve example input', () => {
-        const input = `3   4
+    describe('Part 1', () => {
+        it('can solve example input', () => {
+            const input = `3   4
 4   3
 2   5
 1   3
 3   9
 3   3`;
-        const result = solve(input);
-        expect(result).toBe(11);
-    });
-
-    it('can solve custom input', () => {
-        const input = `24290   95805
+            const result = solvePart1(input);
+            expect(result).toBe(11);
+        });
+    
+        it('can solve custom input', () => {
+            const input = `24290   95805
 35618   61879
 76669   65779
 65052   63193
@@ -43,7 +44,21 @@ describe('Day 1 solution', () => {
 66336   39913
 52887   80280
 72997   39913`;
-        const result = solve(input);
-        expect(result).toBe(72415);
+            const result = solvePart1(input);
+            expect(result).toBe(72415);
+        });
     });
+
+    describe('part 2', () => {
+        it('can solve example input', () => {
+            const input = `3   4
+4   3
+2   5
+1   3
+3   9
+3   3`;
+            const result = solvePart2(input);
+            expect(result).toBe(31);
+        });
+    })
 });
