@@ -32,9 +32,7 @@ export const solvePart2 = (input: string): number => {
 /**
  * splits input into 2 number arrays
  */
-const inputToArrays = (
-  input: string,
-): { array1: number[]; array2: number[] } => {
+const inputToArrays = (input: string): { array1: number[]; array2: number[] } => {
   const array1: number[] = [];
   const array2: number[] = [];
 
