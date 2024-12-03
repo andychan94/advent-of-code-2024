@@ -1,3 +1,3 @@
 export const parseInput = (input: string): string[] => {
-    return input.trim().split('\n');
+  return input.trim().split("\n");
 };
