@@ -1,6 +1,6 @@
 import { solvePart1, solvePart2 } from "../../src/solutions/day2";
 
-describe('Day 1 solution', () => {
+describe('Day 2 solution', () => {
     describe('Part 1', () => {
         it('can solve example input', () => {
             const input = `7 6 4 2 1
