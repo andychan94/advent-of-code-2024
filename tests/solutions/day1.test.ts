@@ -1,15 +1,15 @@
 import { solvePart1, solvePart2 } from "../../src/solutions/day1";
 
 describe("Day 1 solution", () => {
-  describe("Part 1", () => {
-    it("can solve example input", () => {
-      const input = `3   4
+  const exampleInput = `3   4
 4   3
 2   5
 1   3
 3   9
 3   3`;
-      const result = solvePart1(input);
+  describe("Part 1", () => {
+    it("can solve example input", () => {
+      const result = solvePart1(exampleInput);
       expect(result).toBe(11);
     });
 
@@ -51,13 +51,7 @@ describe("Day 1 solution", () => {
 
   describe("part 2", () => {
     it("can solve example input", () => {
-      const input = `3   4
-4   3
-2   5
-1   3
-3   9
-3   3`;
-      const result = solvePart2(input);
+      const result = solvePart2(exampleInput);
       expect(result).toBe(31);
     });
   });
