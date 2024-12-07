@@ -59,7 +59,8 @@ export const solvePart1 = (input: string): number => {
 };
 
 /**
- * brute-force solution, don't judge (takes around 10 mins to solve the actual input)
+ * good old brute-force.
+ * Brace yourself - takes around 10 mins to solve against day6.txt
  */
 export const solvePart2 = (input: string): number => {
   const lines = parseInput(input);
@@ -95,11 +96,21 @@ export const solvePart2 = (input: string): number => {
   const visited = new Set<string>();
   visited.add([guardStartCoords[0], guardStartCoords[1]].toString());
 
-  const isInfiniteLoop = (currentX: number, currentY: number, guardDirectionXY: [number, number], newObstacleX: number, newObstacleY: number) => {
+  const isInfiniteLoop = (
+    currentX: number,
+    currentY: number,
+    guardDirectionXY: [number, number],
+    newObstacleX: number,
+    newObstacleY: number,
+  ) => {
     let obstaclesHit = 0;
     while (obstaclesHit < 100000) {
       visited.add([currentY, currentX].toString());
-      if (obstacleMap[currentY + guardDirectionXY[1]][currentX + guardDirectionXY[0]] === "#" || currentY + guardDirectionXY[1] === newObstacleY && currentX + guardDirectionXY[0] === newObstacleX) {
+      if (
+        obstacleMap[currentY + guardDirectionXY[1]][currentX + guardDirectionXY[0]] === "#" ||
+        (currentY + guardDirectionXY[1] === newObstacleY &&
+          currentX + guardDirectionXY[0] === newObstacleX)
+      ) {
         guardDirectionXY = rotateGuard([guardDirectionXY[0], guardDirectionXY[1]]);
         obstaclesHit += 1;
         continue;
@@ -120,11 +131,11 @@ export const solvePart2 = (input: string): number => {
   let counter = 0;
   for (let i = 0; i <= maxY; i++) {
     for (let j = 0; j <= maxX; j++) {
-      if (obstacleMap[i][j] === '#') {
+      if (obstacleMap[i][j] === "#") {
         continue;
       }
       if (isInfiniteLoop(guardStartCoords[1], guardStartCoords[0], [0, -1], j, i)) {
-        counter +=1
+        counter += 1;
       }
     }
   }
