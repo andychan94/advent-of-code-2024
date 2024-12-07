@@ -1,4 +1,4 @@
-import { solvePart1, solvePart2 } from "../../src/solutions/day6";
+import { solvePart1, solvePart2 } from "../../src/2024/day6";
 
 describe("Day 5 solution", () => {
   const exampleInput = `....#.....

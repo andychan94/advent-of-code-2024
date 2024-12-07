@@ -31,3 +31,11 @@ Thumbs.db
 
 # Ignore TypeScript build artifacts
 *.tsbuildinfo
+
+# AoC tiles - https://github.com/LiquidFun/aoc_tiles
+.aoc_tiles/*
+!.aoc_tiles/tiles/
+/session.cookie
+
+# python venv
+.venv
