@@ -1,4 +1,4 @@
-import { solvePart1 } from "../../src/solutions/day6";
+import { solvePart1, solvePart2 } from "../../src/solutions/day6";
 
 describe("Day 5 solution", () => {
   const exampleInput = `....#.....
@@ -11,10 +11,16 @@ describe("Day 5 solution", () => {
 ........#.
 #.........
 ......#...`;
-  describe("Part 1", () => {
-    it("can solve example input", () => {
-      const result = solvePart1(exampleInput);
-      expect(result).toBe(41);
-    });
+describe("Part 1", () => {
+  it("can solve example input", () => {
+    const result = solvePart1(exampleInput);
+    expect(result).toBe(41);
   });
+});
+describe("Part 2", () => {
+  it("can solve example input", () => {
+    const result = solvePart2(exampleInput);
+    expect(result).toBe(6);
+  });
+});
 });
